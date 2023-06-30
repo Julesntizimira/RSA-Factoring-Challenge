@@ -10,7 +10,7 @@ for line in lines:
     if line.strip():
         a = int(line)
         b = a // 2
-        for j in range(2, b):
+        for j in range(2, b + 1):
             if a % j == 0:
                 print("{}={}*{}".format(a, a//j, j))
                 break

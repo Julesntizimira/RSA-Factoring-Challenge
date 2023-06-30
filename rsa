@@ -1,0 +1,18 @@
+#!/usr/bin/python3
+from  sys import argv
+a = argv[1]
+file = open(a, 'r')
+content = file.read()
+file.close()
+
+token = ''
+for i in content:
+    if i == '\n':
+        a = int(token)
+        b = a // 2
+        for j in range(2, b):
+            if a % j == 0:
+                print("{}={}*{}".format(a, a//j, j))
+                token = ''
+                break
+    token += i

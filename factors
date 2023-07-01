@@ -24,12 +24,10 @@ if __name__ == "__main__":
         exit(1)
     start_time = time.time()
     for line in lines:
-        if line.strip():
-            a = int(line)
-            b = factorise(a)
-            if b:
-                print("{}={}*{}".format(a, b[0], b[1]))
+        a = int(line.strip())
+        b = factorise(a)
+        if b:
+            print("{}={}*{}".format(a, b[0], b[1]))
         if time.time() - start_time > 5:
             print("exceded time limit")
             exit(1)
-
